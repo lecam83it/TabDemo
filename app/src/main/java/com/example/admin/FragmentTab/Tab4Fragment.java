@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.admin.FragmentDetails.Detail3;
 import com.example.admin.FragmentDetails.Detail4;
 import com.example.admin.tabdemo.R;
 
@@ -43,7 +44,7 @@ public class Tab4Fragment extends RootFragment {
         lvExercise.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                getChildFragmentManager().beginTransaction().replace(R.id.frame_layout_tab_4, new Detail4()).addToBackStack(null).commit();
+                getChildFragmentManager().beginTransaction().replace(R.id.frame_layout_tab_4, Detail4.newInstance(list.get(i))).addToBackStack(null).commit();
             }
         });
     }

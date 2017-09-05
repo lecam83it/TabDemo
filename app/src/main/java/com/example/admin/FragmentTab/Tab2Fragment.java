@@ -46,7 +46,7 @@ public class Tab2Fragment extends RootFragment {
         lvSubject.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                getChildFragmentManager().beginTransaction().replace(R.id.frame_layout_tab_2, new Detail2()).addToBackStack(null).commit();
+                getChildFragmentManager().beginTransaction().replace(R.id.frame_layout_tab_2, Detail2.newInstance(list.get(i))).addToBackStack(null).commit();
             }
         });
 

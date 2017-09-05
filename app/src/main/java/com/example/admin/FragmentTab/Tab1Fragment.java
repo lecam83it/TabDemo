@@ -44,8 +44,7 @@ public class Tab1Fragment extends RootFragment {
         lvStudent.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Detail1 fragment = new Detail1();
-                getChildFragmentManager().beginTransaction().replace(R.id.frame_layout_tab_1, fragment).addToBackStack(null).commit();
+                getChildFragmentManager().beginTransaction().replace(R.id.frame_layout_tab_1, Detail1.newInstance(list.get(i))).addToBackStack(null).commit();
             }
         });
     }
