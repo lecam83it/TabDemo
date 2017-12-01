@@ -49,7 +49,7 @@ public class CarouselFragment extends Fragment {
 
         // Note that we are passing childFragmentManager, not FragmentManager
         adapter = new ViewAdapter( getChildFragmentManager());
-
+        pager.setOffscreenPageLimit(4);
         pager.setAdapter(adapter);
         tabLayout.setupWithViewPager(pager);
     }
